@@ -1,0 +1,458 @@
+@font-face {
+    font-family: 'BystanderSans-Light';
+    src: url('fonts/BystanderSans-Light.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+	font-family: 'BystanderSans-Light', sans-serif;
+	background-color: #f5f5f5;
+	color: #333;
+	font-size: 1.3em;
+	padding: 20px;
+}
+
+form {
+	background-color: #fff;
+	border-radius: 8px;
+	padding: 20px 20px 20px 20px;
+	margin: 20px auto;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+	width: 300px;
+	text-align: center;
+}
+
+h1 {
+	color: #333;
+}
+
+h2 {
+	text-align: center;
+}
+
+.toohigh {
+	margin-top: 0px;
+}
+
+h3 {
+	color: #a0062e;
+	padding: 10px 0px;
+	border-top: 2px solid #000;
+	border-bottom: 2px solid #000;
+	margin-top: 10px;
+}
+
+input[type=\"submit\"] {
+	background-color: #4138c2;
+	color: white;
+	padding: 10px 20px;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+	font-size: 16px;
+}
+
+input[type=\"submit\"]:hover {
+	background-color: #669933;
+}
+
+li {
+	text-align: left !important;
+	margin-bottom: 8px;
+	/* Increased space between bullet points */
+}
+
+a:link, a:visited {
+	color: #028abc;
+	text-decoration: none;
+}
+
+a:hover {
+	color: #328f44;
+	text-decoration: underline;
+}
+
+a:active {
+	color: #028abc;
+}
+
+.blue {
+	color: #4091c4 !important;
+}
+
+.bold {
+	font-weight: bold;
+}
+
+.category {
+	font-size: 20px;
+	text-align: left !important;
+	color: #4091c4;
+	margin-bottom: 5px;
+}
+
+.changelog-container {
+	width: 90%;
+	margin: 10px auto;
+}
+
+.checkbox-container {
+	padding-left: 50px;
+	text-align: left;
+}
+
+.container {
+	background-color: #fff;
+	border-radius: 8px;
+	padding: 20px;
+	margin: 20px auto;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+	width: 500px;
+}
+
+.date {
+	font-size: 24px;
+	font-weight: bold;
+	color: #333;
+	margin-bottom: 20px;
+}
+
+.details {
+	padding-left: 20px;
+	/* Adjust this value for bullet indentation */
+	list-style-type: disc;
+	/* Bullet style */
+	list-style-position: outside;
+	/* Ensures bullets are outside the text content */
+}
+
+.details li {
+	text-align: left;
+	margin-bottom: 8px;
+	/* Space between bullet points */
+	/* If needed, add padding-left here for further text indentation */
+}
+
+.green {
+	color: #4e8e4d !important;
+}
+
+.image-checkbox {
+	position: absolute;
+	/* Position the checkbox absolutely within the container */
+	top: 25%;
+	/* Position the checkbox 25% down from the top of the container */
+	left: 50%;
+	/* Center horizontally in the container */
+	transform: translateX(-50%);
+	/* Shift the checkbox left by half its width to center it horizontally */
+	width: 25px;
+	/* Width of the checkbox */
+	height: 25px;
+	/* Height of the checkbox */
+	cursor: pointer;
+	/* Change cursor to pointer on hover */
+	opacity: 0.8;
+	/* Slightly transparent for better visibility of the image */
+	z-index: 2;
+	/* Ensures the checkbox is above the image */
+}
+
+.image-container img {
+	width: 100%;
+	/* Image takes full width of the container */
+	height: auto;
+	/* Maintain aspect ratio */
+	display: block;
+	/* Ensures images are block level */
+}
+
+.image-container {
+	position: relative;
+	/* Allows absolute positioning inside the container */
+	display: inline-block;
+	/* Aligns containers side by side */
+	/* 5px is important to keep 6 cards in one row for sealed */
+	margin: 5px;
+	/* Spacing around each container */
+	flex-basis: calc(100% / 6 - 10px);
+	/* Adjust for 6 images per row, minus margin */
+	width: 180px;
+	/* Increase the width of the container */
+	height: auto;
+	/* Height adjusts based on content */
+}
+
+.image-row {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.link-button,
+input[type="submit"].link-button {
+	display: inline-block;
+	padding: 10px 20px;
+	background-color: #028abc;
+	color: white !important;
+	text-align: center;
+	text-decoration: none !important;
+	font-weight: normal;
+	border-radius: 5px;
+	font-size: 20px;
+	cursor: pointer;
+	border: none;
+}
+
+.link-button:hover,
+input[type="submit"].link-button:hover {
+	background-color: #dca122;
+}
+
+.link-button:disabled {
+	background-color: #aaa;
+	/* Grayed out background */
+	color: #666;
+	/* Dimmed text color */
+	cursor: not-allowed;
+	/* Change cursor to indicate that the button is disabled */
+}
+
+.link-button-frontpage,
+input[type="submit"].link-button-frontpage {
+	display: inline-block;
+	padding: 10px 20px;
+	background-color: #028abc;
+	color: white !important;
+	text-align: center;
+	text-decoration: none !important;
+	font-weight: normal;
+	border-radius: 5px;
+	font-size: 20px;
+	cursor: pointer;
+	border: none;
+    width: 55px !important;	
+}
+
+.link-button-frontpage:hover,
+input[type="submit"].link-button-frontpage:hover {
+	background-color: #dca122;
+}
+
+.link-button-frontpage:disabled {
+	background-color: #aaa;
+	/* Grayed out background */
+	color: #666;
+	/* Dimmed text color */
+	cursor: not-allowed;
+	/* Change cursor to indicate that the button is disabled */
+}
+
+.link-button-draftchoices,
+input[type="submit"].link-button-draftchoices {
+	display: inline-block;
+	padding: 10px 20px;
+	background-color: #028abc;
+	color: white !important;
+	text-align: center;
+	text-decoration: none !important;
+	font-weight: normal;
+	border-radius: 5px;
+	font-size: 20px;
+	cursor: pointer;
+	border: none;
+    width: 140px !important;	
+}
+
+.link-button-draftchoices:hover,
+input[type="submit"].link-button-draftchoices:hover {
+	background-color: #dca122;
+}
+
+.link-button-draftchoices:disabled {
+	background-color: #aaa;
+	/* Grayed out background */
+	color: #666;
+	/* Dimmed text color */
+	cursor: not-allowed;
+	/* Change cursor to indicate that the button is disabled */
+}
+
+.no-bullets {
+	list-style-type: none;
+	/* Remove bullets */
+	padding-left: 0;
+	/* Remove padding if needed */
+	color: #787878 !important;
+}
+
+.pack-title {
+	font-weight: bold;
+	font-size: 24px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+/* Centering the pack title and image container */
+.pack-title,
+.image-container {
+	text-align: center;
+}
+
+.redlink {
+	color: #FF0000;
+}
+
+.results {
+	text-align: left;
+	display: inline-block;
+}
+
+.submit-button:hover {
+	background-color: #669933 !important;
+}
+
+.text-container {
+	background-color: #fff;
+	border-radius: 8px;
+	padding: 20px;
+	margin: 20px auto;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+	width: 500px;
+}
+
+.undies {
+	text-decoration: underline !important;
+}
+
+.update {
+	margin-bottom: 20px;
+}
+
+.widecontainer {
+	background-color: #fff;
+	border-radius: 8px;
+	padding: 20px;
+	margin: 20px auto;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+	width: 500px;
+}
+
+#checkboxForm {
+	background-color: #fff;
+	border-radius: 8px;
+	padding: 20px;
+	margin: 20px auto;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+	width: 1200px;
+}
+
+/* Optional: Style for the form itself, if you want to center the entire form */
+#checkboxForm {
+	text-align: center;
+}
+
+#codeOutput {
+	width: 100%;
+	height: 150px;
+	padding: 10px;
+	margin-bottom: 10px;
+}
+
+#copyButtonDreamborn {
+	padding: 10px 20px;
+	background-color: #4138c2;
+	color: white;
+	border: none;
+	cursor: pointer;
+}
+
+#copyButtonDreamborn:hover {
+	background-color: #669933;
+	color: white;
+}
+
+#copyButtonPixelborn {
+	padding: 10px 20px;
+	background-color: #4138c2;
+	color: white;
+	border: none;
+	cursor: pointer;
+}
+
+#copyButtonPixelborn:hover {
+	background-color: #669933;
+	color: white;
+}
+
+/* Centering the submit button */
+#submitButton {
+	display: block;
+	margin: 0 auto;
+	/* Centers the button */
+}
+
+.center {
+	text-align: center;
+}
+
+.checkbox-checked {
+    opacity: 1; /* Fully visible when checked */
+}
+
+.centered-text {
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 20px; /* Adjust the value as needed */
+}
+
+.linky {
+	display: block;
+	margin-top: 10px;
+}
+
+.linkbox {
+	display: inline-block;
+	border-top: 2px solid #ccc;
+	border-bottom: 2px solid #ccc;
+	padding: 10px;
+}
+
+/* CSS for the normal state of the image */
+.image-container img {
+  transition: transform 0.25s ease;
+  cursor: pointer;
+}
+
+/* CSS for the zoomed state of the image */
+.image-container img.zoomed {
+  transform: scale(2); /* Adjust scale value as needed */
+  z-index: 1000; /* Ensure this is higher than the z-index of other elements */
+  position: relative; /* Necessary for z-index to take effect */
+}
+
+/* CSS for the zoom effect */
+.zoomed {
+  transform: scale(2); /* Adjust the scale value as needed */
+  transition: transform 0.25s ease; /* Smooth transition */
+  z-index: 1000; /* Ensure it appears on top of other elements */
+  position: relative; /* Necessary for z-index to work */
+}
+
+/* CSS for rotation */
+.rotated {
+  transform: rotate(90deg); /* Rotate 90 degrees */
+  transition: transform 0.25s ease;
+  z-index: 1000;
+  position: relative;
+}
+
+/* CSS for combined zoom and rotation */
+.zoomed-and-rotated {
+  transform: scale(2) rotate(90deg); /* Zoom and rotate */
+  transition: transform 0.25s ease;
+  z-index: 1000;
+  position: relative;
+}
